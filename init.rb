@@ -9,4 +9,13 @@ Redmine::Plugin.register :redmine_landing_page do
   author_url 'https://github.com/biow0lf'
 end
 
+require 'dispatcher'
+Dispatcher.to_prepare :redmine_contracts do
+  require_dependency 'projects_controller'
+  ProjectsController.send(:include, RedmineLandingPage::Patches::ProjectsControllerPatch)
+
+  require_dependency 'project'
+  Project.send(:include, RedmineLandingPage::Patches::ProjectPatch)
+end
+
 require 'redmine_landing_page/hooks/view_projects_form_hook'
