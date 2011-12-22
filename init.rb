@@ -23,3 +23,4 @@ end
 
 require 'redmine_landing_page/hooks/view_projects_form_hook'
 require 'redmine_landing_page/hooks/view_my_account_hook'
+require 'redmine_landing_page/hooks/view_users_form_hook'
