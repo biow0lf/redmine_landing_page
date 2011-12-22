@@ -16,6 +16,10 @@ Dispatcher.to_prepare :redmine_contracts do
 
   require_dependency 'project'
   Project.send(:include, RedmineLandingPage::Patches::ProjectPatch)
+
+  require 'principal'
+  User.send(:include, RedmineLandingPage::Patches::UserPatch)
 end
 
 require 'redmine_landing_page/hooks/view_projects_form_hook'
+require 'redmine_landing_page/hooks/view_my_account_hook'
