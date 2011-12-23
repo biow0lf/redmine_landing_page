@@ -1,3 +1,3 @@
-= landing_page
+= redmine_landing_page
 
-Description goes here
+Install to redmine/vendor/plugins directory and run rake db:migrate_plugins.
