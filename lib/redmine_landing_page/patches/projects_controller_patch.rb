@@ -3,6 +3,8 @@ module RedmineLandingPage
     module ProjectsControllerPatch
       def self.included(base)
         base.class_eval do
+          unloadable
+
           alias_method :show_without_landing_page, :show unless method_defined? :show_without_landing_page
 
           def show
