@@ -17,10 +17,10 @@ Dispatcher.to_prepare :redmine_contracts do
   require_dependency 'project'
   Project.send(:include, RedmineLandingPage::Patches::ProjectPatch)
 
-  require 'principal'
+  require_dependency 'principal'
   User.send(:include, RedmineLandingPage::Patches::UserPatch)
 
-  require 'welcome_controller'
+  require_dependency 'welcome_controller'
   WelcomeController.send(:include, RedmineLandingPage::Patches::WelcomeControllerPatch)
 end
 
