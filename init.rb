@@ -19,6 +19,9 @@ Dispatcher.to_prepare :redmine_contracts do
 
   require 'principal'
   User.send(:include, RedmineLandingPage::Patches::UserPatch)
+
+  require 'welcome_controller'
+  WelcomeController.send(:include, RedmineLandingPage::Patches::WelcomeControllerPatch)
 end
 
 require 'redmine_landing_page/hooks/view_projects_form_hook'
