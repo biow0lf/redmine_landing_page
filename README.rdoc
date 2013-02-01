@@ -2,4 +2,4 @@
 
 Landing Page plugin for redmine. Tested with redmine 1.4.7.
 
-Install to redmine/vendor/plugins directory and run rake db:migrate_plugins.
+Install to redmine/vendor/plugins directory and run "bundle exec rake db:migrate_plugins".
