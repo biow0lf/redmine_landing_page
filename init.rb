@@ -10,7 +10,7 @@ Redmine::Plugin.register :redmine_landing_page do
 end
 
 require 'dispatcher'
-Dispatcher.to_prepare :redmine_contracts do
+Dispatcher.to_prepare :redmine_landing_page do
   require_dependency 'projects_controller'
   ProjectsController.send(:include, RedmineLandingPage::Patches::ProjectsControllerPatch)
 
