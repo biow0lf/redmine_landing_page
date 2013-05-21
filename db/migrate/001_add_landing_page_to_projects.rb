@@ -1,9 +1,5 @@
 class AddLandingPageToProjects < ActiveRecord::Migration
-  def self.up
+  def change
     add_column :projects, :landing_page, :string
-  end
-
-  def self.down
-    remove_column :projects, :landing_page
   end
 end
