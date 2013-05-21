@@ -9,8 +9,7 @@ Redmine::Plugin.register :redmine_landing_page do
   author_url 'https://github.com/biow0lf'
 end
 
-require 'dispatcher'
-Dispatcher.to_prepare :redmine_landing_page do
+ActionDispatch::Callbacks.to_prepare do
   require_dependency 'projects_controller'
   ProjectsController.send(:include, RedmineLandingPage::Patches::ProjectsControllerPatch)
 
