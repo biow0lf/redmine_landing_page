@@ -10,4 +10,6 @@ Landing Page plugin for redmine. Tested with redmine 2.6.10 and MRI ruby:
 
 For redmine 1.4.x see redmine-1.x branch.
 
+For redmine 2.6.x see redmine-2.x branch.
+
 Install to redmine/plugins directory and run "bundle exec rake redmine:plugins:migrate".
