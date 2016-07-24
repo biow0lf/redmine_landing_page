@@ -1,10 +1,10 @@
 = redmine_landing_page
 
 Landing Page plugin for redmine. Tested with redmine 2.6.10 and MRI ruby:
-* 1.9.3p551
+* 1.9.3-p551
 * 2.0.0-p648
-* 2.1.10p492
-* 2.2.5p319
+* 2.1.10
+* 2.2.5
 
 For redmine 1.4.x see redmine-1.x branch.
 
