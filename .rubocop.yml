@@ -18,3 +18,7 @@ Style/TrailingBlankLines:
 Style/HashSyntax:
   Enabled: true
 
+# String interpolations should have spaces. e.g. "#{ good }", "#{bad}"
+Style/SpaceInsideStringInterpolation:
+  EnforcedStyle: space
+

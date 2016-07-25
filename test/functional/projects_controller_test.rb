@@ -17,8 +17,8 @@ class ProjectsControllerTest < ActionController::TestCase
 
   def test_redirect_to_landing_page
     @project = Project.generate!(identifier: 'demo',
-                                 landing_page: "http://#{@request.host}/projects/demo/news")
+                                 landing_page: "http://#{ @request.host }/projects/demo/news")
     get :show, id: @project.identifier
-    assert_redirected_to "http://#{@request.host}/projects/#{@project.identifier}/news"
+    assert_redirected_to "http://#{ @request.host }/projects/#{ @project.identifier }/news"
   end
 end
