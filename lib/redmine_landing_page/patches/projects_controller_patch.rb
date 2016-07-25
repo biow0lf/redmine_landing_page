@@ -9,7 +9,7 @@ module RedmineLandingPage
 
           def show
             if @project.landing_page && !@project.landing_page.empty?
-              redirect_to @project.landing_page, :status => 302
+              redirect_to @project.landing_page, status: 302
             else
               show_without_landing_page
             end

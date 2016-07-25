@@ -15,7 +15,7 @@ class WelcomeControllerTest < ActionController::TestCase
   end
 
   def test_redirect_to_landing_page
-    @user = User.generate!(:landing_page => "http://#{@request.host}/projects")
+    @user = User.generate!(landing_page: "http://#{@request.host}/projects")
     @request.session[:user_id] = @user.id
     get :index
     assert_redirected_to "http://#{@request.host}/projects"
